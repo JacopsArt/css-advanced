@@ -1,0 +1,128 @@
+@import './variables';
+@import './portfolio';
+@import './social';
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+body {
+    background-color: $colorBody;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+
+.part1 {
+    @include flexCenter(column, $colorBody);
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    padding: 0px 20px;
+
+
+    .testimonial {
+        height: 90%;
+        box-shadow: 0px 10px 20px 5px #00000098;
+        border-radius: $divRadius;
+
+        .div1 {
+            padding: 50px 25px;
+            background-color: $colorWhite;
+            color: #555555;
+            height: 70%;
+            line-height: 150%;
+            border-top-right-radius: $divRadius;
+            border-top-left-radius: $divRadius;
+        }
+
+        .circular_image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 10px solid $colorWhite;
+            overflow: hidden;
+            display: block;
+            left: 50%;
+            top: 55%;
+            transform: translate(-50%, 20%);
+            position: absolute;
+        }
+
+        .div2 {
+            height: 30%;
+            width: 100%;
+            padding: 50px 25px;
+            color: $colorWhite;
+            text-align: center;
+            background-color: $colorPurple;
+            border-bottom-right-radius: 25px;
+            border-bottom-left-radius: 25px;
+
+            h3 {
+                margin-top: 65px;
+            }
+
+            .website {
+                color: #b3b6eb;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+/* Tablet */
+
+@media (min-width: 768px) {
+    .testimonial {
+        height: 90%;
+        width: 65%;
+        font-size: 1.8rem;
+
+        .part1 {
+            margin: 0 auto;
+
+            .div1 {
+                padding: 40px;
+                line-height: 200%;
+            }
+
+            h3 {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+/* laptop & desktop */
+
+@media (min-width: 1024px) {
+    .testimonial {
+        width: 45%;
+    }
+
+    .part1 {
+        margin: 0 auto;
+        font-size: 1.8rem;
+
+
+        .div1 {
+            padding-top: 80px;
+            line-height: 190%;
+
+        }
+
+        .circular_image {
+
+            width: 200px;
+            height: 200px;
+            transform: translate(-50%, 30%);
+        }
+
+    }
+}

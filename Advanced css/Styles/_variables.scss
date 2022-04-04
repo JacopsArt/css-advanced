@@ -1,0 +1,16 @@
+$colorWhite: rgb(255, 255, 255);
+$colorBody: #c3cfe2;
+$colorPurple: #6871d9;
+$borderRadius: 5%;
+$iconSize: 2rem;
+$iconPaddingr: .8rem;
+$divRadius: 25px;
+
+@mixin flexCenter($direction, $background) {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+    background: $background;
+}
